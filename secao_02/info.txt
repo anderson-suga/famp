@@ -1,0 +1,7 @@
+pip install fastapi uvicorn gunicorn
+
+# Executar o script pelo uvicorn
+uvicorn main:app
+
+# Executando o gunicorn com workers
+gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker
